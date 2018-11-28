@@ -1,6 +1,6 @@
 /* ==============================================================================
- *	This file is the main file for Group 3's assignment 3
- *	due 8/30/18
+ *	This file is the main file for Group 3's assignment 5
+ *	due 11/30/18
  *
  *	James Conory
  *	John Kenny
@@ -26,12 +26,20 @@ int main() {
 		cout << "This is Group 3's Assignment 5\n";
 		cout << "\t1 Washington's Theater\n";
 		cout << endl;
+		cout << "\t2 Weather Statistics\n" << endl;
+		cout << "\t3 Speakers' Bureau Info" << endl;
 		cout << "Enter your selection: ";
-		select = goodIn(0, 1);
+		select = goodIn(0, 3);
 
 		switch (select) {
 			case 1:
 				theater();
+				break;
+			case 2:
+				weatherStats();
+				break;
+			case 3:
+				//speakersInfo();
 				break;
 			case 0:
 				return 0;;

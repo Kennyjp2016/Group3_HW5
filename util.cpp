@@ -56,7 +56,7 @@ int goodIn (int min, int max) {
 }
 
 float goodIn ( float min, float max) {
-	float value;
+	float value = 0;
 	if (min >= max || max <= min) {
 		cout << "Some one messed up and the range should be checked";
 		return value;
