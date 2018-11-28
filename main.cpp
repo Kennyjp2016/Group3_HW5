@@ -24,30 +24,14 @@ int main() {
 		//clear the window
 		cls();
 		cout << "This is Group 3's Assignment 5\n";
-		cout << "\t1 Display Matrix\n";
-		cout << "\t2 Sort Bench Marks\n";
-		cout << "\t3 Search Bench Marks\n";
-		cout << "\t4 Tic Tac Toe\n";
-		cout << "\t5 Animal Business\n";
+		cout << "\t1 Washington's Theater\n";
 		cout << endl;
 		cout << "Enter your selection: ";
-		select = goodIn(0, 5);
+		select = goodIn(0, 1);
 
 		switch (select) {
 			case 1:
-				magicSquareDriver();
-				break;
-			case 2:
-				sortDriver();
-				break;
-			case 3:
-				searchBenchDriver();
-				break;
-			case 4:
-				TicTacToe();
-				break;
-			case 5:
-				animalBusiness();
+				theater();
 				break;
 			case 0:
 				return 0;;
