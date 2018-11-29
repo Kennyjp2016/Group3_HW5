@@ -2,6 +2,7 @@
 #include "util.h"
 #include <string>
 #include <iomanip>
+#include <limits>
 using namespace std;
 
 struct Weather {
@@ -10,7 +11,7 @@ struct Weather {
 	float high_temp;
 	float low_temp;
 	float avg_temp;
-	   };
+};
 
 
 
@@ -23,23 +24,23 @@ void weatherStats() {
 	float total_hightemp = 0, total_t_rainfall = 0, total_low_temp = 0, total_avg_temp = 0;
 	float yearly_high = -100, yearly_low = 150, avgMonthRain = 0;
 	int high_temp_month, low_temp_month;
-		int count = 0;
+	int count = 0;
 	while (count < 12) {
 		cout << "Entering Data for month " << count + 1 << " of 12" << endl;
 		weather1[count].location = region;
-		
+
 		cout << "What is the total rainfall for " << count + 1 << " in " << region << endl;
 		weather1[count].t_rainfall = goodIn(0.0, numeric_limits<float>::max());
 		total_t_rainfall = total_t_rainfall + weather1[count].t_rainfall;
-		
+
 		cout << "Enter the highest temperature for month " << count + 1 << endl;
 		weather1[count].high_temp = goodIn(-100, 150);
 		total_hightemp = total_hightemp + weather1[count].high_temp;
-		
+
 		cout << "Enter the lowest temperature for month " << count + 1 << endl;
 		weather1[count].low_temp = goodIn(-100, 150);
 		total_low_temp = total_low_temp + weather1[count].low_temp;
-		
+
 		cout << "Enter the average temperature for month " << count + 1 << endl;
 		weather1[count].avg_temp = goodIn(weather1[count].low_temp, weather1[count].high_temp);
 		total_avg_temp = weather1[count].avg_temp + total_avg_temp;
@@ -72,7 +73,7 @@ void weatherStats() {
 	cout << "The lowest temperature of the year is " << yearly_low << " degrees F and occured in month " << low_temp_month << endl;
 	cout << "The highest temperature of the year is " << yearly_high << "degrees F and occured in month " << high_temp_month << endl;
 
-	
+
 	exitPrompt();
 
 }
