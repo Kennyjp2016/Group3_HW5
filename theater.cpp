@@ -17,6 +17,7 @@ struct TheaterData
 TheaterData getData() {
 	TheaterData theater;
 	cout << "Enter a play or a musical title\n";
+	cin.ignore();
 	getline(cin, theater.title);
 	cout << "Enter the director\n";
 	getline(cin, theater.director);
