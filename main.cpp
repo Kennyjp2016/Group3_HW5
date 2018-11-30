@@ -28,6 +28,7 @@ int main() {
 		cout << "\t1 Washington's Theater\n";
 		cout << "\t2 Weather Statistics\n";
 		cout << "\t3 Speakers' Bureau Info\n";
+		cout << "\t4 Tell Me a Joke\n";
 		cout << "\t5 Code Talkers\n";
 		cout << "Enter your selection: ";
 		select = goodIn(0, 5);
@@ -42,8 +43,12 @@ int main() {
 			case 3:
 				//speakersInfo();
 				break;
+			case 4:
+				tellMeAJoke();
+				break;
 			case 5:
 				encodeDecode();
+				break;
 			case 0:
 				return 0;;
 				break;

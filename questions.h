@@ -3,6 +3,7 @@
 void theater();
 void weatherStats();
 //void speakersInfo();
+void tellMeAJoke();
 void encodeDecode();
 
 #endif

@@ -14,6 +14,8 @@
 #include <limits>
 #include <vector>
 #include <algorithm>
+#include <fstream>
+#include <string>
 using namespace std;
 
 /* Int input validation
@@ -137,4 +139,18 @@ vector<int> genNums (int size, bool random) {
 		random_shuffle(begin(nums), end(nums));
 	}
 	return nums;
+}
+/* This function displays the contents of a file to the terminal
+ * The file should of been opened before hand and closed afterwards
+ *
+ * Inputs
+ *	file	a fstream reference
+ */
+void showContents (fstream &file) {
+	string line;
+	getline (file, line);
+	while (file) {
+		cout << line << endl;
+		getline(file, line);
+	}
 }

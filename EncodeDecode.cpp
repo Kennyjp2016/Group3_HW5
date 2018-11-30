@@ -95,17 +95,18 @@ void encode (fstream &inFile) {
  * Inputs
  *	file	a fstream reference
  */
-void showContents (fstream &file) {
-	string line;
-	getline (file, line);
+/*
+   void showContents (fstream &file) {
+   string line;
+   getline (file, line);
 
-	while (file) {
-		cout << line << endl;
+   while (file) {
+   cout << line << endl;
 
-		getline(file, line);
-	}
-}
-
+   getline(file, line);
+   }
+   }
+ */
 /*
  * This is the driver for question 5
  */
