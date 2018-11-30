@@ -24,12 +24,13 @@ int main() {
 		//clear the window
 		cls();
 		cout << "This is Group 3's Assignment 5\n";
-		cout << "\t1 Washington's Theater\n";
 		cout << endl;
-		cout << "\t2 Weather Statistics\n" << endl;
-		cout << "\t3 Speakers' Bureau Info" << endl;
+		cout << "\t1 Washington's Theater\n";
+		cout << "\t2 Weather Statistics\n";
+		cout << "\t3 Speakers' Bureau Info\n";
+		cout << "\t5 Code Talkers\n";
 		cout << "Enter your selection: ";
-		select = goodIn(0, 3);
+		select = goodIn(0, 5);
 
 		switch (select) {
 			case 1:
@@ -41,6 +42,8 @@ int main() {
 			case 3:
 				//speakersInfo();
 				break;
+			case 5:
+				encodeDecode();
 			case 0:
 				return 0;;
 				break;

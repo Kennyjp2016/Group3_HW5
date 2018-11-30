@@ -1,7 +1,7 @@
 SHELL = /bin/bash
 CC = g++
 CFLAGS = -g -Wall
-OUTP = main.o theater.o util.o weather.o
+OUTP = main.o theater.o util.o weather.o EncodeDecode.o
 
 runMe: $(OUTP)
 	g++ $(CFLAGS) -o runMe $(OUTP)
@@ -17,6 +17,9 @@ weather.o: weather.cpp util.h
 
 speakers.o: speakers.cpp util.h
 	g++ -c speakers.cpp
+
+EncodeDecode.o: EncodeDecode.cpp util.h
+	g++ -c EncodeDecode.cpp
 
 util.o: util.cpp
 	g++ -c util.cpp

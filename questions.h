@@ -3,5 +3,6 @@
 void theater();
 void weatherStats();
 //void speakersInfo();
+void encodeDecode();
 
 #endif
