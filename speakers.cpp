@@ -30,18 +30,15 @@ void Speakers() {
 	cout << "Please enter their phone number" << endl;
 
 	getline(cin, event1[count].phone_number);
-	while (event1[count].phone_number.length != 10) {
-		cout << "Please enter a valid 10 digit phone number including the 1" << endl;
-		getline(cin, event1[count].phone_number);
-	}
+	unsigned int phonelength = 10;
+	//while (event1[count].phone_number.length != phonelength) {
+	//	cout << "Please enter a valid 10 digit phone number including the 1" << endl;
+	//	getline(cin, event1[count].phone_number);
+	//}
 
 	cout << "Please enter their email address" << endl;
 	getline(cin, event1[count].email);
 
-	while (!isValidEmail) {
-		string *atlocation;
-		atlocation = strstr(event1[count].email, '@')
-	}
 
 	count++;
 	}
