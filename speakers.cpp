@@ -12,10 +12,11 @@ struct speaker {
 	int fee;
 };
 
-void Speakers(){
+void Speakers() {
+	bool isValidEmail = false;
 	speaker event1[10];
 	int count = 0;
-	while (count < 9);
+	while (count < 9){
 	cout << "Please enter a speakers name" << endl;
 	cin.ignore();
 
@@ -35,10 +36,30 @@ void Speakers(){
 	}
 
 	cout << "Please enter their email address" << endl;
-	
+	getline(cin, event1[count].email);
 
+	while (!isValidEmail) {
+		string *atlocation;
+		atlocation = strstr(event1[count].email, '@')
+	}
 
+	count++;
+	}
+	int input;
 
+	int count1 = 0;
+	bool leave = true;
+	while (!leave) {
+		cout << "Please enter the number for which speaker you would like to see more info for" << endl;
+		input = goodIn(0, 10);
+		while (count1 < 9) {
+			int input;
+			cout << count1 + 1 << "\t" << event1[count1].name << endl;
+			count1++;
+		}
+		cout << event1[input].name << endl << event1[input].phone_number << endl << event1[input].email << endl << event1[input].topic << event1[input].fee << endl;
 
+		 leave = exitPrompt();
+	}
 }
 
